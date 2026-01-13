@@ -6,7 +6,7 @@ class Email
 
   def send(to)
     # TODO: want to log here
-    log()
+    log(to)
     s = connect_to_mail_server()
     construct_and_send_email(s, to, @headers, @body)
     close_connection(s)
@@ -22,8 +22,8 @@ m = Email.new(
   {:subject => "Hey!", :from => "beej@beej.us"},
   "How's it going? Have you heard the latest gossip?"
 )
-to = "chris@example.com"
+
 m.send("chris@example.com") 
-m.log(to)
+m.log("chris@example.com")
 
 #add new code in a separate method and call it within another function so you can test it. This is the sprout method. 

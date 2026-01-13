@@ -6,8 +6,8 @@ class Email
 
   def send(to)
     # TODO: want to log here
-    log()
-    send_fake(to)
+    log(to)
+    # send_email(to)
   end
 end
 
@@ -36,6 +36,7 @@ end
 
 e = TestEmail.new()
 e.send()
+# e.send_email()
 
 #modify codebase by extracting offending code and putting into its own method so you can add new code and test it.
 #this is the wrap method 
