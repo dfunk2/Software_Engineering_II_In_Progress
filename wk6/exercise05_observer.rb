@@ -40,3 +40,4 @@ weather_station.add_observer(observer)
 weather_station.temperature = 72
 
 
+#when temperature changes the observer is notified and prints the message
